@@ -36,6 +36,7 @@ public class NewMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        ResetJump();
 
     }
 
@@ -46,7 +47,7 @@ public class NewMovement : MonoBehaviour
         if (grounded)
             rb.drag = groundDrag;
         else
-            rb.drag = 0;
+            rb.drag = 2;
 
     }
 
